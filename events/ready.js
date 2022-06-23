@@ -1,5 +1,6 @@
 const index = require("../index")
 const config = require("../configs/config.json")
+const setActivity = require("../helpers/setActivity")
 
 module.exports = {
     name : "ready",
@@ -7,6 +8,7 @@ module.exports = {
     async execute(client){
 
         console.log(`Bot [${client.user.tag}] is now ready to use.`)
+        setActivity(client)
 
         const guild = client.guilds.cache.get(config.guilds.main)
         const adminGuild = client.guilds.cache.get(config.guilds.admin)
