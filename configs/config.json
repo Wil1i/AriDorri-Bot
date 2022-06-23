@@ -6,5 +6,11 @@
     "guilds" : {
         "main" : "633342652632399884",
         "admin" : "675412018496405545"
+    },
+
+    "db" : {
+        "user" : "root",
+        "password" : "shayanwilliams",
+        "name" : "aridorri"
     }
 }
