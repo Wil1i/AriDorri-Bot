@@ -12,5 +12,13 @@
         "user" : "root",
         "password" : "shayanwilliams",
         "name" : "aridorri"
+    },
+
+    "colors" : {
+        "main" : ""
+    },
+
+    "embeds" : {
+        "footer" : ""
     }
 }
