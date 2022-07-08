@@ -16,7 +16,7 @@ const commandRegister = (client) => {
           client.commands.set(command.name, command)
       
           if(!command.everyoneCanUse) command.data.defaultPermission = false
-          // commands.push(command.data.toJSON())
+          commands.push(command.data.toJSON())
           
           console.log(`[REG] Command ${command.name} registered `);
       
