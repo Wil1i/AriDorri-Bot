@@ -7,8 +7,8 @@ module.exports = {
     data : new SlashCommandBuilder()
     .setName("unban")
     .setDescription("Report unbanned users who unbanned from stream")
-    .addStringOption(option => option.setName("username").setRequired(true))
-    .addStringOption(option => option.setName("reason").setRequired(true)),
+    .addStringOption(option => option.setName("username").setDescription("Username of user who unbanned").setRequired(true))
+    .addStringOption(option => option.setName("reason").setDescription("Reason about unban").setRequired(true)),
 
     async execute(client, interaction){
         
