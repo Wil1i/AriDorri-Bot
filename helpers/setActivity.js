@@ -19,6 +19,10 @@ const activity = async (client) => {
         }
     })
 
+    client.user.setActivity(activityText.value, {
+        type : activityMode.value.toUpperCase(),
+        url : activityURL.value
+    })
     setInterval(() => {
         client.user.setActivity(activityText.value, {
             type : activityMode.value.toUpperCase(),
