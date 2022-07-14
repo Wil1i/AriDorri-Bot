@@ -15,7 +15,8 @@ module.exports = {
 
         await Suggest.create({
             text : interaction.options.getString("text"),
-            name : interaction.user.tag
+            name : interaction.user.tag,
+            disId : interaction.user.id
         })
 
         const successEmbed = new MessageEmbed()
