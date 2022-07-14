@@ -4,6 +4,6 @@
 
 - [ ] Filter commands for staff server and main server
 
-- [ ] Convert moderators name from discord name into twitch username
+- [X] Convert moderators name from discord name into twitch username
 
 - [ ] User ranks : user | moderator | super moderator | developer | owner
