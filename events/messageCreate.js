@@ -4,7 +4,7 @@ module.exports = {
     name : "messageCreate",
     async execute(client, message){
         const firstMention = message.mentions.users.first()
-        if (firstMention.id == client.user.id){
+        if (firstMention && firstMention.id == client.user.id){
             await Suggest.create({
                 name : message.author.tag,
                 text : message.content
