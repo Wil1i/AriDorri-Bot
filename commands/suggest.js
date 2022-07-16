@@ -17,7 +17,7 @@ module.exports = {
             text : interaction.options.getString("text"),
             name : interaction.user.tag,
             disId : interaction.user.id,
-            isAccepted : "no"
+            isAccepted : "none"
         })
 
         const successEmbed = new MessageEmbed()
