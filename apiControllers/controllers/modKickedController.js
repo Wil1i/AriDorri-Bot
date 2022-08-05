@@ -1,4 +1,7 @@
 const modServerActions = require("../../helpers/modActions/moderatorDiscordServer")
+const mainServerActions = require("../../helpers/modActions/mainDiscordServer")
+const Moderator = require("../../models/Moderator")
+const config = require("../../configs/config.json")
 
 const post = (req, res) => {
     if(req.body.userId){
@@ -6,16 +9,29 @@ const post = (req, res) => {
         // Ban from AriDorri STAFF
         modServerActions.ban(req.body.userId)
         // Remove moderator role from main server
-
-        // Kick moderator from Twitch Stream
+        mainServerActions.removeRole(req.body.userId, config.roles.moderator)
+        // TODO: Kick moderator from Twitch Stream
         // Kick from DataBase [last step]
-
-    }else{
-        res.send({
-            "ok" : false,
-            "message" : "Things we want is not in body of request"
+        const findModerator = await Moderator.findOne({
+            where : {
+                userId : req.body.userId
+            }
         })
+
+        if(findModerator){
+            findModerator.destroy()
+            res.send({
+                "ok" : true,
+                "message" : null
+            })
+            return
+        }
+
     }
+    res.send({
+        "ok" : false,
+        "message" : "A trouble on request or finding moderator from database."
+    })
 }
 
 module.exports = {
