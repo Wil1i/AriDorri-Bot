@@ -4,6 +4,8 @@
 
 - [ ] Filter commands for staff server and main server
 
-- [X] Convert moderators name from discord name into twitch username
-
 - [ ] User ranks : user | moderator | super moderator | developer | owner
+
+- [] Complete command register and event register for twitch bot
+
+- [] Get a username and password for twitch bot
