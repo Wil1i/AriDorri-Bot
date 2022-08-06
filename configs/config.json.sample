@@ -1,24 +1,28 @@
 {
     "bot":{
-        "token":""
+        "token":"BOT TOKEN HERE"
     },
 
     "guilds" : {
-        "main" : "633342652632399884",
-        "admin" : "675412018496405545"
+        "main" : "GUILD ID FOR MAIN GUILD HERE",
+        "admin" : "GUILD ID FOR ADMIN GUILD HERE"
     },
 
     "db" : {
-        "user" : "root",
-        "password" : "shayanwilliams",
-        "name" : "aridorri"
+        "user" : "DATABASE USERNAME",
+        "password" : "DATABASE PASSWORD",
+        "name" : "DATABASE NAME"
     },
 
     "colors" : {
-        "main" : ""
+        "main" : "HEX COLOR FOR MAIN COLOR USING IN EMBED"
     },
 
     "embeds" : {
-        "footer" : ""
+        "footer" : "TEXT FOR FOOTER OF EMBEDS"
+    },
+
+    "roles" : {
+        "moderator" : "MODERATOR ROLE IN MAIN GUILD"
     }
 }
