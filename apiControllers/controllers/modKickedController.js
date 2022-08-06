@@ -3,14 +3,14 @@ const mainServerActions = require("../../helpers/modActions/mainDiscordServer")
 const Moderator = require("../../models/Moderator")
 const config = require("../../configs/config.json")
 
-const post = (req, res) => {
+const post = async (req, res) => {
     if(req.body.userId){
 
         // Ban from AriDorri STAFF
         modServerActions.ban(req.body.userId)
         // Remove moderator role from main server
         mainServerActions.removeRole(req.body.userId, config.roles.moderator)
-        // TODO: Kick moderator from Twitch Stream
+        // TODO: Kick moderator from Twitch Stream (it's better to do this using API system)
         // Kick from DataBase [last step]
         const findModerator = await Moderator.findOne({
             where : {
