@@ -6,7 +6,7 @@
 
 - [ ] User ranks : user | moderator | super moderator | developer | owner
 
-- [ ] Complete command register and event register for twitch bot
+- [x] Complete command register and event register for twitch bot
 
 - [ ] Get a username and password for twitch bot
 
@@ -15,3 +15,5 @@
 - [ ] Create admin panel for see all users and manage them
 
 - [ ] Create a panel for supermods for add new mods (give access for join into staff discord first)
+
+- [ ] Add permissions for twitch commands and events ( also when it's registering )
