@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const eventRegister = (client) => {
   const eventsDirectory = fs
-    .readdirSync("events")
+    .readdirSync("twitchUtils/events")
     .filter((file) => file.endsWith(".js"));
 
   client.events = {};
