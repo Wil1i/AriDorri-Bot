@@ -17,3 +17,5 @@
 - [ ] Create a panel for supermods for add new mods (give access for join into staff discord first)
 
 - [ ] Add permissions for twitch commands and events ( also when it's registering )
+
+- [ ] Move mod checking system into js side
