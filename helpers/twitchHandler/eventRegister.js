@@ -11,8 +11,8 @@ const eventRegister = (client) => {
     const event = require(`../../twitchUtils/events/${eventFile}`);
     if (event.name && event.execute) {
       client.events[event.name] = event;
-      client.on(event.name, (arg1, arg2, arg3) => {
-        event.execute(client, arg1, arg2, arg3);
+      client.on(event.name, (arg1, arg2, arg3, arg4, arg5) => {
+        event.execute(client, arg1, arg2, arg3, arg4, arg5);
       });
       console.log(`[TTV] Event ${event.name} registered`);
     } else {
