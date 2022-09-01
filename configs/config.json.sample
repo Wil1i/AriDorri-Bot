@@ -1,28 +1,34 @@
 {
-    "bot":{
-        "token":"BOT TOKEN HERE"
-    },
+  "bot": {
+    "token": "NzUxNzI0MDE3MTgxNzg2MTgz.GS-vhZ.yFN762NNDh1Y9Laz7EISncNi3tyaBdeee8Jsoc"
+  },
 
-    "guilds" : {
-        "main" : "GUILD ID FOR MAIN GUILD HERE",
-        "admin" : "GUILD ID FOR ADMIN GUILD HERE"
-    },
+  "twitch": {
+    "username": "",
+    "password": "",
+    "prefix": ""
+  },
 
-    "db" : {
-        "user" : "DATABASE USERNAME",
-        "password" : "DATABASE PASSWORD",
-        "name" : "DATABASE NAME"
-    },
+  "guilds": {
+    "main": "633342652632399884",
+    "admin": "675412018496405545"
+  },
 
-    "colors" : {
-        "main" : "HEX COLOR FOR MAIN COLOR USING IN EMBED"
-    },
+  "db": {
+    "user": "root",
+    "password": "shayanwilliams",
+    "name": "aridorri"
+  },
 
-    "embeds" : {
-        "footer" : "TEXT FOR FOOTER OF EMBEDS"
-    },
+  "colors": {
+    "main": ""
+  },
 
-    "roles" : {
-        "moderator" : "MODERATOR ROLE IN MAIN GUILD"
-    }
+  "embeds": {
+    "footer": ""
+  },
+
+  "roles": {
+    "moderator": ""
+  }
 }
