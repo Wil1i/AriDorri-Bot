@@ -22,13 +22,13 @@ module.exports = {
       name: interaction.user.tag,
       disId: interaction.user.id,
       isAccepted: "none",
+    }).then(async () => {
+      const successEmbed = new MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(
+          "Your suggestion successfully sent to developers. Thanks."
+        );
+      await interaction.reply({ embeds: [successEmbed], ephemeral: true });
     });
-
-    const successEmbed = new MessageEmbed()
-      .setColor("RANDOM")
-      .setDescription(
-        "Your suggestion successfully sent to developers. Thanks."
-      );
-    await interaction.reply({ embeds: [successEmbed], ephemeral: true });
   },
 };

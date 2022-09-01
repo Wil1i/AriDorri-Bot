@@ -5,7 +5,7 @@ const post = (req, res) => {
   const findUser = client.users.cache.get(req.query.id);
   if (findUser) {
     findUser
-      .send(req.body.message)
+      .send(req.query.message)
       .then(() => {
         res.send({
           status: "sent",
