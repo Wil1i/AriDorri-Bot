@@ -1,6 +1,6 @@
 {
   "bot": {
-    "token": "NzUxNzI0MDE3MTgxNzg2MTgz.GS-vhZ.yFN762NNDh1Y9Laz7EISncNi3tyaBdeee8Jsoc"
+    "token": "BOT TOKEN"
   },
 
   "twitch": {
@@ -10,14 +10,14 @@
   },
 
   "guilds": {
-    "main": "633342652632399884",
-    "admin": "675412018496405545"
+    "main": "MAIN GUILD ID",
+    "admin": "ADMIN GUILD ID"
   },
 
   "db": {
-    "user": "root",
-    "password": "shayanwilliams",
-    "name": "aridorri"
+    "user": "DATABASE USER",
+    "password": "DATABASE PASSWORD",
+    "name": "DATABASE NAME"
   },
 
   "colors": {
