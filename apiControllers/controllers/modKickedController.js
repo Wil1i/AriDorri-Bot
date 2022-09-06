@@ -1,39 +1,37 @@
-const modServerActions = require("../../helpers/modActions/moderatorDiscordServer")
-const mainServerActions = require("../../helpers/modActions/mainDiscordServer")
-const Moderator = require("../../models/Moderator")
-const config = require("../../configs/config.json")
+const modServerActions = require("../../helpers/modActions/moderatorDiscordServer");
+const mainServerActions = require("../../helpers/modActions/mainDiscordServer");
+const Moderator = require("../../models/Moderator");
 
 const post = async (req, res) => {
-    if(req.body.userId){
+  if (req.query.userId) {
+    // Ban from AriDorri STAFF
+    modServerActions.ban(req.query.userId);
+    // Remove moderator role from main server
+    mainServerActions.removeMod(req.query.userId);
 
-        // Ban from AriDorri STAFF
-        modServerActions.ban(req.body.userId)
-        // Remove moderator role from main server
-        mainServerActions.removeRole(req.body.userId, config.roles.moderator)
-        // TODO: Kick moderator from Twitch Stream (it's better to do this using API system)
-        // Kick from DataBase [last step]
-        const findModerator = await Moderator.findOne({
-            where : {
-                userId : req.body.userId
-            }
-        })
+    // TODO: Kick moderator from Twitch Stream (it's better to do this using API system)
+    // Remove from DataBase [last step]
+    const findModerator = await Moderator.findOne({
+      where: {
+        userId: req.query.userId,
+      },
+    });
 
-        if(findModerator){
-            findModerator.destroy()
-            res.send({
-                "ok" : true,
-                "message" : null
-            })
-            return
-        }
-
+    if (findModerator) {
+      findModerator.destroy();
+      res.send({
+        ok: true,
+        message: null,
+      });
+      return;
     }
-    res.send({
-        "ok" : false,
-        "message" : "A trouble on request or finding moderator from database."
-    })
-}
+  }
+  res.send({
+    ok: false,
+    message: "A trouble on request or finding moderator from database.",
+  });
+};
 
 module.exports = {
-    post
-}
+  post,
+};
